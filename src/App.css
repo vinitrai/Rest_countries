@@ -1,0 +1,165 @@
+*,*::before,*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.app {
+  background-color: #fff;
+  color: #333;
+  min-height: 100vh;
+}
+.app.dark{
+  background-color: #333;
+  color:#fff;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  width:90%;
+  max-width: 1250px;
+  margin:0 auto;
+  padding:0 1em;
+  
+}
+.top--bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search--filter{
+  display:flex;
+  flex-direction: column;
+  gap:16px;
+  padding:0.5em 0;
+}
+.search{
+  
+  display: flex;
+  align-items: center;
+  border:1px solid;
+}
+.search--input,.dropdown--select{
+ padding:0.5em 0 ;
+ width:100%;
+}
+.search--input:focus{
+  outline: none;
+}
+@media screen and (min-width:567px){
+  .search--filter{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .search{
+    flex:0 0 50%;
+  }
+}
+
+
+/* country section styling */
+.country--list{
+  display:flex;
+  gap:16px;
+  flex-direction: column;
+  
+}
+.country--card{
+  flex:0 0 100%;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+  padding:1em;
+  background-color: #b4b1b1;
+}
+.country--image{
+  height:160px;
+  width:100%;
+  /* border:2px solid red; */
+  
+  margin-bottom:1em;
+  overflow: hidden;
+}
+.country--image img{
+  width: 100%;
+  height:100%;
+}
+.country--detail p{
+  margin-top:0.5em
+}
+
+@media screen and (min-width:567px){
+  .country--list{
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+  .country--card{
+    flex:0 0 calc(50% - 12px)
+  }
+}
+@media screen and (min-width:768px){
+  .country--card{
+    flex:0 0 calc(33.33% - 12px)
+  }
+}
+@media screen and (min-width:992px){
+  .country--card{
+    flex:0 0 calc(25% - 12px)
+  }
+}
+
+
+/* single country style */
+.back--btn{
+  display: inline-block;
+  padding:0.5em 0.8em;
+  margin:0.5em 0 ;
+}
+.country--description{
+  display:flex;
+  flex-direction: column;
+  gap:16px;
+
+}
+
+.single--image{
+  width:100%;
+  height:250px;
+  
+
+}
+.single--image img{
+  max-width:100%;
+  height:100%;
+  
+}
+
+.country--info p{
+  margin-top: 0.5em;
+}
+.country--borders{
+  display: flex;
+  gap:16px;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+.country--borders button{
+  padding: 0.5em 0.8em;
+  font-size: 1em;
+}
+@media screen and (min-width:768px){
+  .country--description{
+    flex-direction: row;
+  }
+  .single--image{
+   flex:1;
+  }
+  .country--info{
+  flex:2;
+  }
+}
+@media screen and (min-width:992px){
+
+  .country--info{
+  flex:1;
+  }
+}
